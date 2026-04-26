@@ -41,87 +41,72 @@ O projeto também está disponível no Kaggle, onde foi desenvolvido e executado
 - Matplotlib
 - Seaborn
 - Jupyter Notebook (Kaggle)
+- Looker / Data Studio
+
+---
+## Acesse a dashboard construída no Looker Studio clicando na imagem
+
+[![Thumbnail Dashboard Olist](https://raw.githubusercontent.com/lucaselpidio/media-rep/refs/heads/main/dashboard_olist_thumbnail.png)](https://datastudio.google.com/reporting/30b2712f-01db-4832-88b4-7837695f6257)
 
 ---
 
-## 📈 Análises Realizadas
+# 📊 Resumo Geral dos Insights da Dashboard
 
-### 1️⃣ Faturamento do E-commerce
-O faturamento total foi calculado considerando apenas pedidos com status "delivered", garantindo que apenas transações concluídas fossem analisadas.
+## 💰 Receita e Volume
+O negócio apresenta um volume consistente de pedidos ao longo do tempo, com faturamento acompanhando essa evolução.
 
-A análise mensal do faturamento permite observar sua evolução ao longo do tempo, evidenciando períodos de crescimento do e-commerce ao longo do intervalo analisado.
-
-No período analisado, o e-commerce gerou um faturamento total de **R$ 19.618.578,64**, indicando uma operação de grande porte.
- 
-![Faturamento mensal do e-commerce](https://github.com/lucaselpidio/media-rep/blob/main/olist_project/fat_mensal.png)
+* **Ticket Médio:** Estável entre **R$ 206,00 e R$ 208,00**, indicando consistência no valor das compras.
+* **Insight:** O crescimento do faturamento está mais atrelado ao **volume de pedidos** do que a variações no valor médio por compra.
 
 ---
 
-### 2️⃣ Ticket Médio dos Pedidos
-Visualização da distribuição do valor dos pedidos com o objetivo de comunicar o comportamento típico dos clientes, evitando que valores extremamente raros prejudiquem a leitura do gráfico.
-
-A análise considera todos os pedidos no cálculo do ticket médio, sem exclusão de dados. No entanto, para fins de comunicação visual, o gráfico foi limitado ao percentil 99, permitindo destacar a região onde se concentra a maior parte dos pedidos.
-
-A distribuição apresenta forte assimetria à direita, indicando a presença de poucos pedidos de valor extremamente elevado em comparação à maioria das compras.
- 
-![Distribuição do ticket médio dos pedidos](https://github.com/lucaselpidio/media-rep/blob/main/olist_project/ticket_medio.png)
+## 🛍️ Produto e Comportamento de Compra
+* Faturamento concentrado em categorias específicas de produtos.
+* Alta diversidade nas formas de pagamento utilizadas.
+* **Insight:** Oportunidade de otimizar a conversão focando nas categorias de maior performance e adaptando o checkout às preferências de pagamento.
 
 ---
 
-### 3️⃣ Volume de Vendas × Faturamento por Categoria
-Análise comparativa entre o volume de vendas e o faturamento por categoria de produto, com o objetivo de identificar diferenças entre popularidade e geração de receita.
-
-O volume de vendas por categoria evidencia as categorias mais populares, geralmente associadas a produtos de menor ticket, porém com alta recorrência de compras.
-
-Já a análise de faturamento por categoria destaca categorias menos frequentes, porém mais lucrativas, podendo apresentar divergências significativas em relação ao ranking por volume de vendas.
- 
-![Volume de vendas por categoria](https://github.com/lucaselpidio/media-rep/blob/main/olist_project/cat_produtos.png)
-
-![Faturamento por categoria](https://github.com/lucaselpidio/media-rep/blob/main/olist_project/cat_fat.png)
-
+## 🚚 Logística
+* Tempo médio de entrega dentro do padrão esperado.
+* **Taxa de Atraso:** Apenas **6,27%** (6.3k de 97.6k pedidos).
+* **Insight:** A operação logística é majoritariamente eficiente e apresenta baixa taxa de erro.
 
 ---
 
-### 4️⃣ Evolução Temporal dos Pedidos
-Análise da evolução do volume de pedidos ao longo do tempo, com o objetivo de avaliar o crescimento do e-commerce e investigar a presença de possíveis variações no comportamento de compra.
-
-A análise foi realizada no nível de pedido,
-
-Os resultados evidenciam um crescimento consistente no volume de pedidos ao longo dos anos analisados. No entanto, comparações diretas entre meses de anos diferentes devem ser interpretadas com cautela, uma vez que o crescimento estrutural do negócio influencia fortemente o volume absoluto de pedidos, limitando a identificação de sazonalidade com esse tipo de visualização.
- 
-![Evolução temporal dos pedidos](https://github.com/lucaselpidio/media-rep/blob/main/olist_project/comportamento_temporal.png)
-
+## ⭐ Experiência do Cliente
+* **Nota Média Geral:** 4.0
+* **Distribuição de Avaliações:**
+    * **5⭐:** 66k avaliações (Volume expressivo)
+    * **1⭐:** 14.8k avaliações (Volume relevante)
+* **Insight:** Existe uma **polarização** nas avaliações, indicando que experiências extremas (muito boas e muito ruins) coexistem na operação.
 
 ---
 
-### 5️⃣ Prazo de Entrega × Avaliação do Cliente
-Análise do impacto do cumprimento do prazo de entrega na avaliação dos clientes, buscando responder se atrasos na entrega influenciam a nota atribuída à experiência de compra.
-
-A análise foi realizada no nível de pedido.
- 
-![Avaliação média por status de entrega](https://github.com/lucaselpidio/media-rep/blob/main/olist_project/entrega_aval.png)
-
-
-📌 **Resultado-chave**:
-- Pedidos atrasados: média de avaliação ≈ **2,2**
-- Pedidos no prazo: média de avaliação ≈ **4,1**
+## 🔗 Relação Logística × Satisfação (Insight Principal)
+A pontualidade é o principal driver de satisfação:
+* **Pedidos no Prazo:** 4.15 ⭐
+* **Pedidos Atrasados:** 2.25 ⭐
+* **Insight Crítico:** O atraso reduz a satisfação do cliente em quase **50%**.
 
 ---
 
-## 🔎 Principais Insights
-- O e-commerce apresentou crescimento consistente ao longo do período analisado
-- Categorias mais vendidas em volume não são necessariamente as que mais geram faturamento
-- A maior parte dos pedidos possui valores relativamente baixos
-- O prazo de entrega tem impacto direto e significativo na satisfação do cliente
+## 💵 Logística × Valor Financeiro
+* **Ticket Médio (Atrasado):** R$ 208,08
+* **Ticket Médio (No Prazo):** R$ 206,03
+* **Insight:** O atraso não impacta o valor financeiro da venda atual, mas prejudica severamente a percepção de marca.
 
 ---
 
-## 🚀 Próximos Passos
-- Analisar sazonalidade separando crescimento estrutural e efeito mensal
-- Investigar causas de atraso por região, vendedor ou categoria
-- Criar dashboards interativos para acompanhamento dos indicadores
-- Aplicar modelos simples de previsão de demanda ou atraso
+## 🧠 Conclusão Estratégica
+Embora a falha logística atinja uma minoria (**~6%**), o impacto na experiência do usuário é desproporcional. O problema não afeta o faturamento imediato (ticket médio estável), mas gera um risco crítico para a **retenção e reputação** do negócio.
 
+### 🚀 Resumo para Negócio
+1.  **Operação:** Eficiente em escala.
+2.  **Gargalo:** Impacto emocional alto em falhas pontuais.
+3.  **Foco:** Melhorar a comunicação e reduzir atrasos para proteger o LTV (Lifetime Value).
+
+>  *A análise mostrou que a logística é eficiente em escala, mas falhas pontuais têm impacto desproporcional na satisfação do cliente, sem afetar diretamente a receita no curto prazo.*
 ---
 
 ## 📁 Estrutura do Repositório
